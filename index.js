@@ -1,4 +1,4 @@
-/* Variables and Data Types */
+	/* Variables and Data Types */
 /*Console.log each variable and test your code in the terminal using the Node REPL*/
 
 /*i.e.*/
@@ -16,6 +16,13 @@ console.log(pet);
 * Each value should be a String. 
 **/
 
+var firstName = "Virginia";
+var lastName = "Souza";
+var favoriteFood =	"pizza";
+
+console.log(firstName);
+console.log(lastName);
+console.log(favoriteFood);
 
 /**
 * #2
@@ -25,6 +32,13 @@ console.log(pet);
 *
 * Each value should be a Number
 **/
+var favoriteNumber = 4
+var currentYear = 2017
+var theOnePrinceSong = 1999
+
+console.log(favoriteNumber);
+console.log(currentYear);
+console.log(theOnePrinceSong);
 
 
 /**
@@ -36,6 +50,14 @@ console.log(pet);
 * Each value should be a Boolean
 **/
 
+var likesMcDonalds = true;
+var watchedMrRobot = true;
+var ranMarathon = false;
+
+console.log(likesMcDonalds);
+console.log(watchedMrRobot);
+console.log(ranMarathon);
+
 
 /**
 * #4
@@ -45,13 +67,15 @@ console.log(pet);
 *
 * Each value should be Null 
 **/
+var completedPrepClass = null;
 
+console.log(completedPrepClass);
 
 /*
 #5. 
 * What is the difference between null and undefined? Type your answer in two or three commented-out sentences.
 */
-
+// null means there is no value to the variable.  Undefined means that the variable does not have a defined value.
 
 /**
 * #6
@@ -65,7 +89,13 @@ console.log(pet);
 * Declare a variable named `mixPlate` and assign it an array containing different data types of your choosing.
 **/
 
+var plateLunch = ["rice", "loco moco", "mochiko chicken", "haupia", "lomi salmon"];
 
+console.log(plateLunch);
+
+var fruitBasket = ["apples", "grapes", "peas", "kiwi", "oranges"];
+
+console.log(fruitBasket);
 
 /*7
 * Accessing Values in Arrays
@@ -76,7 +106,10 @@ What is the length of this array? Please print the length (a number) to the cons
 What is the index position of carrot cake? Please print this item to the console.
 What is the index position of lemon bars? Please print this item to the console.
 */
-
+var partyList = ["carrot cake", "rocky road ice cream", "mochiko chicken", "orange tang", "lemon bars"];
+console.log(partyList.length);
+console.log(partyList[0]);
+console.log(partyList[4]);
 
 
 /*
@@ -92,6 +125,28 @@ What is the index position of lemon bars? Please print this item to the console.
 *Declare a new variable, `mariahStory`. Assign it the value of concatenating the variables `mariahCareyAge`, `favSneaker`, `favLoveSong` and `coffeeShop` to create the following sentence:
 At the age of xx, Mariah Carey, wearing her fancy xx, sang xx at the xx.
 */
+var birthPlace = "Kailua";
+var fullName =  firstName + lastName;
+var whereFrom = fullName  + " is from " + birthPlace ;
+
+console.log(fullName);
+console.log(whereFrom);
+
+var num1 = 3;
+var num2 = 4;
+
+var sum = num1 + num2;
+console.log(sum);
+
+var difference = num1 - num2;
+var product = num1 * num2;
+var quotient = num1 / num2;
+var remainder = num1%num2;
+
+console.log(difference);
+console.log(product);
+console.log(quotient);
+console.log(remainder);
 
 
 
@@ -107,6 +162,7 @@ At the age of xx, Mariah Carey, wearing her fancy xx, sang xx at the xx.
 * Divide the two variables and store it to a new variable named `quotient`.
 * What is the remainder when you divide num1 by num2? Print your answer to the console.
 
+/*
 
 
 /**
@@ -122,15 +178,29 @@ At the age of xx, Mariah Carey, wearing her fancy xx, sang xx at the xx.
 * Declare another variable named `sameNumba` and compare a string "5" and a number 5 using equality.
 * Print both variables to the console. If the answers are different, why? If not, why not? Write you answer two or three commented-out sentences.
 
-
-
 * Use the logical && or || and compare the following:
 * 3>2 3<1 (use or)
 * 3>2 6>3 (use and)
 * 7>2 8<5 (use and)
-* Declare variables and print the results to the console. What are the differences between the three and why?
+* Declare variables and print the results to the console. What are the differences between the three and why?/**
+**/
 
+var isStrictlyEqual = "Tacocat" === "tacocat";
+console.log(isStrictlyEqual);
+var isLooselyEqual = "Tacocat" == "tacocat";
+console.log(isLooselyEqual);
 
+var sameNum = "5" === 5;
+console.log(sameNum);
+var sameNumba = "5" == 5;
+console.log(sameNumba);
+
+var op1 = 3>2 || 3<1;
+console.log(op1);
+var op2 = 3>2 && 6>3;
+console.log(op2);
+var op3 = 7>2 && 8<5;
+console.log(op3);
 
 /**
 * #11
@@ -143,7 +213,19 @@ At the age of xx, Mariah Carey, wearing her fancy xx, sang xx at the xx.
 
 * Write 5 different assignment statements and `console.log()` the value of the variable after each
 * assignment statement to show the current value. REMEMBER: an assignment is DIFFERENT from a declaration.
-*
+**/
+
+var myBox = 7;
+myBox += 5;
+console.log(myBox);
+myBox -= 7;
+console.log(myBox);
+myBox *= 3;
+console.log(myBox);
+myBox /= 4;
+console.log(myBox);
+
+
 
 /**
 * Final Boss 
@@ -169,4 +251,33 @@ At the age of xx, Mariah Carey, wearing her fancy xx, sang xx at the xx.
 * This function should return a String along the lines of, "Tomatoes and Cheese make a Pizza!"
 * if invoked in this way -> cook("Tomatoes", "Cheese", "Pizza");
 **/
+
+function bakedPie(ingredient){
+	return "Today's special " + ingredient + " pie"
+};
+
+console.log(bakedPie("blueberry"));
+
+var pieResult = bakedPie("blueberry");
+console.log(pieResult);
+
+function jump(height){
+	return "You jumped " + height + " feet high!"
+};
+
+console.log(jump(9));
+
+var jumpResult = jump(9);
+console.log(jumpResult);
+
+function cook(ingredient1, ingredient2, recipeName){
+	return ingredient1 + " and " + ingredient2 + " make a " + recipeName
+};
+
+console.log(cook("tomatoes", "cheese", "pizza"));
+
+
+
+
+
 
